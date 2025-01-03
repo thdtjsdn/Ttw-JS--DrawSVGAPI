@@ -484,36 +484,54 @@ const EVENT_LISTENERS = {
 
 # API 목록(필요할 법한 목록만)
 
-- drawArc(WEBGL, FRAME_BUFFER_OBJECT, ...)
-- drawCircle(WEBGL, FRAME_BUFFER_OBJECT, ...)
-- drawRect(WEBGL, FRAME_BUFFER_OBJECT, ...)
-- drawRect_Rotation(WEBGL, FRAME_BUFFER_OBJECT, ...)
-- drawTriangle(WEBGL, FRAME_BUFFER_OBJECT, ...)
-- drawTriangle_Rotation(WEBGL, FRAME_BUFFER_OBJECT, ...)
+ - clearRect = function (parentElement)
 
-- drawImageBitmap(WEBGL, FRAME_BUFFER_OBJECT, ...)
-- drawImageBitmap_Rotation(WEBGL, FRAME_BUFFER_OBJECT, ...)
+ - drawArc = function (parentElement, fillStyle, globalAlpha_Fill, lineWidth, strokeStyle, globalAlpha_Line, cX, cY, r, sA, eA, counterClockWise)
+ - drawArc_Fill = function (parentElement, fillStyle, globalAlpha_Fill, cX, cY, r, sA, eA, counterClockWise)
+ - drawArc_Line = function (t, lineWidth, strokeStyle, globalAlpha, cX, cY, r, sA, eA, counterClockWise)
 
-- drawLine(WEBGL, FRAME_BUFFER_OBJECT, ...)
-- drawLineDashed(WEBGL, FRAME_BUFFER_OBJECT, ...)
-- drawLineThick(WEBGL, FRAME_BUFFER_OBJECT, ...)
-- drawLineThickDashed(WEBGL, FRAME_BUFFER_OBJECT, ...)
-- drawLineThickGradient(WEBGL, FRAME_BUFFER_OBJECT, ...)
+ - drawCircle = function (parentElement, fillStyle, globalAlpha_Fill, lineWidth, strokeStyle, globalAlpha_Line, cX, cY, r)
+ - drawCircle_Fill = function (parentElement, fillStyle, globalAlpha, cX, cY, r)
+ - drawCircle_Line = function (parentElement, lineWidth, strokeStyle, globalAlpha, cX, cY, r)
 
-- drawPolygon(WEBGL, FRAME_BUFFER_OBJECT, ...)
-- drawPolygonBezierCurve(WEBGL, FRAME_BUFFER_OBJECT, ...)
-- drawPolygonCurve(WEBGL, FRAME_BUFFER_OBJECT, ...)
+ - drawGradient_Circular = function (parentElement, cX, cY, innerRadius, outerRadius, colorStops)
+ - drawGradient_Linear = function (parentElement, x0, y0, x1, y1, colorStops)
 
-- drawPolyline(WEBGL, FRAME_BUFFER_OBJECT, ...)
-- drawPolylineBezierCurve(WEBGL, FRAME_BUFFER_OBJECT, ...)
-- drawPolylineBezierCurveThick(WEBGL, FRAME_BUFFER_OBJECT, ...)
-- drawPolylineCurve(WEBGL, FRAME_BUFFER_OBJECT, ...)
-- drawPolylineCurveThick(WEBGL, FRAME_BUFFER_OBJECT, ...)
+ - drawImage = function (parentElement, x, y, width, height, imageUrl)
+ - drawImage_Rotation = function (parentElement, x, y, width, height, rotationAngle, imageUrl)
+ - drawImageBitmap = function (parentElement, x, y, width, height, bitmap)
+ - drawImageBitmap_Rotation = function (parentElement, x, y, width, height, rotationAngle, bitmapUrl)
 
-- drawRegularPolygon(WEBGL, FRAME_BUFFER_OBJECT, ...)
-- drawRegularPolygon_Rotation(WEBGL, FRAME_BUFFER_OBJECT, ...);
+ - drawLine = function (parentElement, x1, y1, x2, y2, lineWidth, strokeStyle, globalAlpha)
+ - drawLine_Gradient = function (parentElement, x1, y1, x2, y2, lineWidth, gradientStops)
 
-- drawText(WEBGL, FRAME_BUFFER_OBJECT, ...)
-- drawText_Rotation(WEBGL, FRAME_BUFFER_OBJECT, ...)
+ - drawPolygon = function (parentElement, points, fillStyle, globalAlpha_Fill, lineWidth, strokeStyle, globalAlpha_Line)
+ - drawPolygonBezierCurve = function (parentElement, points, fillStyle, globalAlpha_Fill, lineWidth, strokeStyle, globalAlpha_Line)
+ - drawPolygonCurve = function (parentElement, points, fillStyle, globalAlpha_Fill, lineWidth, strokeStyle, globalAlpha_Line)
+ - drawPolygon_Dashed = function (parentElement, points, fillStyle, globalAlpha_Fill, lineWidth, strokeStyle, globalAlpha_Line, dashArray)
+ - drawPolygon_Gradient_Linear = function (parentElement, points, gradientStops)
+ - drawPolygon_Gradient_Linear_Center = function (parentElement, points, gradientStops)
+
+ - drawPolyline = function (parentElement, points, lineWidth, strokeStyle, globalAlpha)
+ - drawPolylineBezierCurve = function (parentElement, points, lineWidth, strokeStyle, globalAlpha)
+ - drawPolylineBezierCurve_Dashed = function (parentElement, points, lineWidth, strokeStyle, globalAlpha, dashArray)
+ - drawPolylineCurve = function (parentElement, points, lineWidth, strokeStyle, globalAlpha)
+ - drawPolylineCurve_Dashed = function (parentElement, points, lineWidth, strokeStyle, globalAlpha, dashArray)
+ - drawPolyline_Dashed = function (parentElement, points, lineWidth, strokeStyle, globalAlpha, dashArray)
+ - drawPolyline_Gradient_Linear = function (parentElement, points, lineWidth, gradientStops)
+ - drawPolyline_Gradient_Linear_Center = function (parentElement, points, lineWidth, gradientStops)
+
+ - drawRect = function (parentElement, x, y, width, height, fillStyle, globalAlpha_Fill, lineWidth, strokeStyle, globalAlpha_Line)
+ - drawRect_Fill = function (parentElement, x, y, width, height, fillStyle, globalAlpha_Fill)
+ - drawRect_Line = function (parentElement, lineWidth, strokeStyle, globalAlpha, x, y, width, height)
+
+ - drawRegularPolygon = function (parentElement, centerX, centerY, radius, sides, fillStyle, globalAlpha_Fill, lineWidth, strokeStyle, globalAlpha_Line)
+ - drawRegularPolygon_Gradient_Linear = function (parentElement, centerX, centerY, radius, sides, gradientStops)
+ - drawRegularPolygon_Rotation = function (parentElement, centerX, centerY, radius, sides, rotationAngle, fillStyle, globalAlpha_Fill, lineWidth, strokeStyle, globalAlpha_Line)
+
+ - drawText = function (parentElement, x, y, textContent, fontSize, fontFamily, color, opacity)
+ - drawText_Line = function (parentElement, x, y, textContent, fontSize, fontFamily, lineColor, opacity)
+ - drawText_Line_Rotation = function (parentElement, x, y, textContent, fontSize, fontFamily, lineColor, opacity, rotationAngle)
+ - drawText_Rotation = function (parentElement, x, y, textContent, fontSize, fontFamily, color, opacity, rotationAngle)
 
 ---
